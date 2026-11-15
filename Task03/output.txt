@@ -1,0 +1,20 @@
+HASHSET EQUALS AND HASHCODE ANALYSIS
+====================================
+
+CURRENT VERSION: hashCode() NOT OVERRIDDEN
+
+TEST 1 - SAME OBJECT SCANNED TWICE
+Prediction: 1 student
+Actual Set Size: 1
+
+TEST 2 - DIFFERENT OBJECTS, SAME REGISTRATION NUMBER
+Prediction: 2 unique students
+Actual Set Size: 3
+Expected after correction: 2
+
+TEST 3 - CHANGE REGISTRATION NUMBER
+Before modification: true
+After modification: true
+Note: Changing a key field can affect HashSet lookup.
+
+TESTING COMPLETED
