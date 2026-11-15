@@ -1,0 +1,50 @@
+RAILWAY E-TICKET GENERATION
+===========================
+
+PREDICTION:
+String creates many intermediate objects.
+StringBuilder is expected to be faster.
+StringBuffer provides synchronized methods.
+
+WORKLOAD 1 - SHORT TICKET
+------------------------------
+Tickets: 1
+Fields per ticket: 6
+String Average Time: 0.007 ms
+StringBuilder Average Time: 0.005 ms
+StringBuffer Average Time: 0.003 ms
+Estimated intermediate String objects:
+String: Many intermediate objects
+StringBuilder: One final String per ticket
+StringBuffer: One final String per ticket
+
+WORKLOAD 2 - LARGE TICKET GENERATION
+------------------------------
+Tickets: 10000
+Fields per ticket: 50
+String Average Time: 57.246 ms
+StringBuilder Average Time: 16.441 ms
+StringBuffer Average Time: 16.093 ms
+Estimated intermediate String objects:
+String: Many intermediate objects
+StringBuilder: One final String per ticket
+StringBuffer: One final String per ticket
+
+WORKLOAD 3 - CUSTOM WORKLOAD
+------------------------------
+Tickets: 2000
+Fields per ticket: 100
+String Average Time: 8.177 ms
+StringBuilder Average Time: 2.059 ms
+StringBuffer Average Time: 6.031 ms
+Estimated intermediate String objects:
+String: Many intermediate objects
+StringBuilder: One final String per ticket
+StringBuffer: One final String per ticket
+
+DESIGN DECISION:
+Use StringBuilder for individual tickets.
+Use StringBuffer when synchronized
+access to a shared mutable buffer is required.
+
+TESTING COMPLETED
