@@ -1,0 +1,49 @@
+PHARMACY INVENTORY - MAP ANALYSIS
+=================================
+
+MEDICINE COUNT: 1000
+HashMap 100000 Lookups: 26.091 ms
+TreeMap 100000 Lookups: 34.015 ms
+LinkedHashMap 100000 Lookups: 8.644 ms
+TreeMap Code Order Report: 1.112 ms
+LinkedHashMap Insertion Order Report: 0.511 ms
+First Medicine in TreeMap: MED000001 - Medicine1 - Stock: 101
+First Medicine in LinkedHashMap: MED001000 - Medicine1000 - Stock: 1100
+HashMap Size: 1000
+TreeMap Size: 1000
+LinkedHashMap Size: 1000
+
+MEDICINE COUNT: 10000
+HashMap 100000 Lookups: 8.441 ms
+TreeMap 100000 Lookups: 24.578 ms
+LinkedHashMap 100000 Lookups: 7.120 ms
+TreeMap Code Order Report: 1.643 ms
+LinkedHashMap Insertion Order Report: 1.038 ms
+First Medicine in TreeMap: MED000001 - Medicine1 - Stock: 101
+First Medicine in LinkedHashMap: MED010000 - Medicine10000 - Stock: 10100
+HashMap Size: 10000
+TreeMap Size: 10000
+LinkedHashMap Size: 10000
+
+MEDICINE COUNT: 50000
+HashMap 100000 Lookups: 2.859 ms
+TreeMap 100000 Lookups: 33.484 ms
+LinkedHashMap 100000 Lookups: 3.322 ms
+TreeMap Code Order Report: 6.631 ms
+LinkedHashMap Insertion Order Report: 2.275 ms
+First Medicine in TreeMap: MED000001 - Medicine1 - Stock: 101
+First Medicine in LinkedHashMap: MED050000 - Medicine50000 - Stock: 50100
+HashMap Size: 50000
+TreeMap Size: 50000
+LinkedHashMap Size: 50000
+
+DESIGN DECISION
+HashMap is suitable for fast stock lookup.
+TreeMap is suitable for medicine code order.
+LinkedHashMap maintains insertion order.
+
+Hashtable is not preferred in new code.
+It is synchronized and usually slower when
+thread safety is not required.
+
+TESTING COMPLETED
