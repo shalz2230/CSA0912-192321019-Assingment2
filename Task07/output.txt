@@ -1,0 +1,41 @@
+TASK 07 - DESIGN CHALLENGE
+==========================
+
+BOTTLENECK DIAGNOSIS
+Original design sorts the list for every ranking request.
+Repeated sorting wastes processing time.
+
+REDESIGN OBJECTIVE
+Sort once and reuse the sorted ranking.
+Avoid unnecessary repeated sorting.
+
+PERFORMANCE VALIDATION
+
+TEAM COUNT: 1000
+Ranking Requests: 50
+Original repeated sorting: 38.161 ms
+Redesign initial sorting: 0.363 ms
+Redesign repeated reads: 3.710 ms
+Results Match: true
+
+TEAM COUNT: 10000
+Ranking Requests: 50
+Original repeated sorting: 183.074 ms
+Redesign initial sorting: 2.133 ms
+Redesign repeated reads: 8.022 ms
+Results Match: true
+
+TEAM COUNT: 50000
+Ranking Requests: 50
+Original repeated sorting: 423.948 ms
+Redesign initial sorting: 6.423 ms
+Redesign repeated reads: 7.704 ms
+Results Match: true
+
+FINAL DESIGN DECISION
+Redesign is suitable when ranking is requested frequently.
+It avoids repeated sorting when data remains unchanged.
+If teams change, the cached ranking must be refreshed.
+The cached result requires additional memory.
+
+TESTING COMPLETED
