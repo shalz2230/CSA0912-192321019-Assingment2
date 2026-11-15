@@ -1,0 +1,32 @@
+HOSPITAL EMERGENCY TRIAGE SYSTEM
+================================
+
+TREATMENT ORDER:
+Bala(Severity 1)
+Divya(Severity 1)
+Charan(Severity 2)
+Farhan(Severity 2)
+Arun(Severity 3)
+Hari(Severity 3)
+Gokul(Severity 4)
+Ezhil(Severity 5)
+
+QUEUE PERFORMANCE TEST
+=======================
+Patients: 1000 | Add Time: 8.206 ms | Remove Time: 2.892 ms
+Patients: 10000 | Add Time: 14.633 ms | Remove Time: 14.506 ms
+Patients: 50000 | Add Time: 27.067 ms | Remove Time: 48.497 ms
+
+DESIGN DECISION
+PriorityQueue is suitable for emergency triage.
+Lower severity number receives higher priority.
+Arrival order is maintained for equal severity.
+Adding a patient: O(log n)
+Removing next patient: O(log n)
+A plain FIFO queue cannot handle severity priority.
+
+FAIRNESS NOTE
+Minor patients may wait longer during continuous emergencies.
+Priority can be increased based on waiting time.
+
+TESTING COMPLETED
