@@ -1,0 +1,63 @@
+MUSIC PLAYLIST COLLECTION COMPARISON
+====================================
+
+PLAYLIST SIZE: 1000
+--------------------------------
+ArrayList Add End: 0.496 ms
+LinkedList Add End: 0.452 ms
+ArrayList Add Front: 0.642 ms
+LinkedList Add Front: 0.665 ms
+ArrayList Add Middle: 0.047 ms
+LinkedList Add Middle: 0.134 ms
+ArrayList Get: 0.268 ms
+LinkedList Get: 1.228 ms
+ArrayList Iteration: 0.410 ms
+LinkedList Iteration: 0.407 ms
+ArrayList Remove Front: 0.069 ms
+LinkedList Remove Front: 0.026 ms
+ArrayList Remove Middle: 1.420 ms
+LinkedList Remove Middle: 0.300 ms
+ArrayDeque Up Next: 0.368 ms
+
+PLAYLIST SIZE: 10000
+--------------------------------
+ArrayList Add End: 1.706 ms
+LinkedList Add End: 1.378 ms
+ArrayList Add Front: 7.144 ms
+LinkedList Add Front: 1.609 ms
+ArrayList Add Middle: 0.885 ms
+LinkedList Add Middle: 8.260 ms
+ArrayList Get: 1.102 ms
+LinkedList Get: 39.807 ms
+ArrayList Iteration: 1.154 ms
+LinkedList Iteration: 1.401 ms
+ArrayList Remove Front: 1.547 ms
+LinkedList Remove Front: 0.299 ms
+ArrayList Remove Middle: 0.736 ms
+LinkedList Remove Middle: 6.330 ms
+ArrayDeque Up Next: 1.566 ms
+
+PLAYLIST SIZE: 50000
+--------------------------------
+ArrayList Add End: 3.197 ms
+LinkedList Add End: 4.172 ms
+ArrayList Add Front: 128.551 ms
+LinkedList Add Front: 2.108 ms
+ArrayList Add Middle: 18.415 ms
+LinkedList Add Middle: 186.627 ms
+ArrayList Get: 3.286 ms
+LinkedList Get: 849.445 ms
+ArrayList Iteration: 3.756 ms
+LinkedList Iteration: 0.941 ms
+ArrayList Remove Front: 22.095 ms
+LinkedList Remove Front: 0.347 ms
+ArrayList Remove Middle: 10.956 ms
+LinkedList Remove Middle: 155.634 ms
+ArrayDeque Up Next: 5.581 ms
+
+DESIGN DECISION
+ArrayList is suitable for frequent random access.
+LinkedList supports efficient end operations.
+ArrayDeque is suitable for Up Next queue.
+
+TESTING COMPLETED
